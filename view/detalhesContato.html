@@ -1,0 +1,31 @@
+<div class="jumbotron">
+    <div class="container" style="text-align: left">
+        <h3 style="text-decoration:underline;">{{contato.nome | name}}</h3>
+        <p style="font-size: 10pt"><strong>Telefone: </strong>{{contato.telefone}}</p>
+        <table class="table table-striped table-condensed" style="font-size: 9pt">
+        <thead >
+        <tr>
+            <td colspan="2"><strong>OPERADORA</strong></td>
+        </tr>
+        </thead>
+            <tbody>
+            <tr>
+                <td>NOME</td>
+                <td>{{contato.operadora.nome}}
+            </tr>
+            <tr>
+                <td>CATEGORIA</td>
+                <td>{{contato.operadora.categoria}}
+            </tr>
+            <tr>
+                <td>CÓDIGO</td>
+                <td>{{contato.operadora.codigo}}
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr/>
+    <a class="btn btn-default btn-block" href="#/contatos">Voltar</a>
+</div>
+
+

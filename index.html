@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="listaTelefonica">
+<link>
+<meta charset="UTF-8">
+<title>Lista Telefonica</title>
+
+<script src="libs/jquery/jquery-1.12.2.js"></script>
+<link rel="stylesheet" href="libs/bootstrap3/css/bootstrap.css">
+<script src="libs/bootstrap3/js/bootstrap.js"></script>
+
+<script src="libs/angularjs1.5/angular.js"></script>
+<script src="libs/angularjs1.5/angular-messages.js"></script>
+<script src="libs/angularjs1.5/angular-locale_pt-br.js"></script>
+<script src="libs/angularjs1.5/angular-route.js"></script>
+
+</head>
+<body>
+<div class="jumbotron" ng-show="loading">
+    <h5>Carregando...</h5>
+</div>
+<div ng-hide="loading">
+    <div class="content">
+        <div ng-view></div>
+    </div>
+    <div ng-include="'view/footer.html'"></div>
+</div>
+
+<!-- MODULES -->
+<!-- my app -->
+<script src="js/app.js"></script>
+<link rel="stylesheet" href="css/app.css">
+<!-- masks -->
+<script src="libs/angular-pt_b-rmasks1.0/ptBrMasks.js"></script>
+<!-- components -->
+<script src="libs/ui-rbcomponents/js/uiRbComponents.js"></script>
+<link rel="stylesheet" href="libs/ui-rbcomponents/css/ui-rb-compoents.css">
+
+<!-- CONFIGS -->
+<script src="js/config/routeConfig.js"></script>
+<script src="js/config/interceptorsConfig.js"></script>
+
+<!-- CONTROLLERS -->
+<script src="js/controllers/listaTelefonicaCtr.js"></script>
+<script src="js/controllers/novoContatoCtrl.js"></script>
+<script src="js/controllers/detalhesContatoCtrl.js"></script>
+
+<!-- SERVICES -->
+<script src="js/services/contatosAPIService.js"></script>
+
+<!-- VALUES -->
+<script src="js/value/configValue.js"></script>
+
+<!-- FILTERS -->
+<script src="js/filters/nameFilter.js"></script>
+<script src="js/filters/ellipsisFilter.js"></script>
+
+<!-- INTERCEPTORS -->
+<script src="js/interceptors/timestampInterceptor.js"></script>
+<script src="js/interceptors/errorInterceptor.js"></script>
+<script src="js/interceptors/loadingInterceptor.js"></script>
+
+
+</body>
+</html>

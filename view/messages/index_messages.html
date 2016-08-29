@@ -1,0 +1,20 @@
+<div ng-messages="contatoForm.nome.$error" ng-show="contatoForm.nome.$dirty">
+    <div ng-message="required" class="alert alert-danger">
+        Por favor, preencha o nome!
+    </div>
+    <div ng-message="minlength" class="alert alert-danger">
+        O campo nome deve ter no minimo 10 caracteres
+    </div>
+</div>
+<div ng-messages="contatoForm.telefone.$error" ng-show="contatoForm.telefone.$dirty">
+    <div ng-message="required" class="alert alert-danger">
+        Por favor, preencha o telefone!
+    </div>
+    <div ng-message="pattern" class="alert alert-danger">
+        O campo telefone deve seguir o padrão dd ddddd-dddd
+    </div>
+</div>
+<div class="alert alert-danger" ng-show="contatoForm.operadora.$error.required
+                && contatoForm.operadora.$dirty">
+    Por favor, selecione a operadora!
+</div>

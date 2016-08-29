@@ -1,0 +1,51 @@
+.ui-alert {
+    background-color: #f2dede;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.ui-alert-title {
+    color: #af4341;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.ui-alert-message {
+    color: #af4341;
+}
+
+.ui-accordion-title {
+    cursor: pointer;
+    height: 40px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    border-radius: 5px 5px 0px 0px;
+    text-align: left;
+    background: #e2e2e2; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#bfbfbf, #e2e2e2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#bfbfbf, #e2e2e2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#bfbfbf, #e2e2e2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#bfbfbf, #e2e2e2); /* Standard syntax (must be last) */
+}
+
+.ui-accordion-title span {
+    font-size: 11px;
+    float: right;
+}
+
+.ui-accordion-content {
+     border: 1px solid #D0D0D0;
+     border-top-width: 0px;
+     background-color: #ffffff;
+    padding: 5px;
+ }
+
+.ui-accordion-content p {
+    font-size: 10.5pt;
+    text-align: justify;
+    text-justify: inter-word;
+}

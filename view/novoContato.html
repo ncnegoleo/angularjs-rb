@@ -1,0 +1,51 @@
+<div class="jumbotron">
+    <form name="contatoForm">
+        <input class="form-control" type="text" name="nome"
+               ng-model="contato.nome" placeholder="Nome"
+               ng-required="true" ng-minlength="10"/>
+        <input class="form-control" type="text" name="telefone"
+               ng-model="contato.telefone" placeholder="Telefone"
+               ng-required="true" ng-pattern="/^\d{2}\s\d{4,5}-\d{4}$/" ui-telefone/>
+        <select class="form-control" name="operadora"
+                ng-model="contato.operadora" ng-required="true"
+                ng-options="operadora.nome for operadora in operadoras | orderBy:'nome'">
+            <option value="">Selecione uma operadora</option>
+        </select>
+    </form>
+    <hr/>
+    <div ng-include="'view/messages/index_messages.html'"></div>
+    <a id="saveContinue" class="btn btn-primary btn-block"
+       data-toggle="modal"
+       data-target="{{contatoForm.$invalid ? '' : myModal}}"
+       ng-click="adicionarContato(contato, false)"
+       ng-disabled="contatoForm.$invalid">
+        Salvar e Continuar
+    </a>
+    <a class="btn btn-success btn-block"
+       ng-click="adicionarContato(contato, true);"
+       ng-disabled="contatoForm.$invalid">
+        Salvar
+    </a>
+    <a class="btn btn-default btn-block" ng-click="toContatos()">Voltar</a>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Salvar Contatos</h4>
+            </div>
+            <div class="modal-body">
+                <p>Contato salvo com sucesso!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button"
+                        class="btn btn-default btn-sm"
+                        data-dismiss="modal">Ok
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
