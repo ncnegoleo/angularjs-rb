@@ -23,6 +23,7 @@ app.controller('listaTelefonicaCtrl', function ($scope, contatosAPI) {
         $scope.contatos = contatos.filter(function (contato) {
             if (!contato.selecionado) return contato;
         });
+        $scope.hasContatoSelecionado = false;
     };
 
     $scope.verificarContatoSelecionado = function (contatos) {

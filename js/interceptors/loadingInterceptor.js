@@ -12,7 +12,7 @@ angular.module("listaTelefonica").factory("loadingInterceptor", function ($q, $r
         response: function (response) {
             $timeout(function () {
                 $rootScope.loading = false;
-            }, 1000);
+            }, 500);
             return response;
         },
         responseError: function (rejection) {

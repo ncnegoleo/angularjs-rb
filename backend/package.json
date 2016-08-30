@@ -4,7 +4,8 @@
   "description": "API de contatos para a aplicação do curso de angular.",
   "main": "contatosBackend.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [
     "contatos",
@@ -17,5 +18,13 @@
     "express": "^3.x"
   },
   "author": "Rodrigo Branas",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncnegoleo/angularjs-rb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ncnegoleo/angularjs-rb/issues"
+  },
+  "homepage": "https://github.com/ncnegoleo/angularjs-rb#readme"
 }
